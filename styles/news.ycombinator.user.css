@@ -1,0 +1,237 @@
+/* ==UserStyle==
+@name HackerNews
+@namespace https://github.com/gocom/usercss
+@version 1.0.0
+@description Personal UserCSS
+@author Jukka Svahn (https://github.com/gocom)
+@homepageURL https://github.com/gocom/usercss
+@supportURL https://github.com/gocom/usercss/issues
+@license MIT
+@preprocessor default
+@var color body-background-color "Background color" #222
+@var color body-text-color "Text color" #f6f6ef
+@var color panel-background-color "Panel background color" #333
+@var color link-visited-color "Link visited color" #666
+@var color accent-color "Accent color" #ff6600
+@var text body-font "Font" 1em/1.35 Roboto
+@var text rank-color "Rank color" #999
+@var text rank-font "Rank font family" 1rem/1.35 "Josefin Sans"
+==/UserStyle== */
+@-moz-document domain("news.ycombinator.com") {
+    /**
+     * Main.
+     */
+    body {
+        background: var(--body-background-color);
+        color: var(--body-text-color);
+        font: var(--body-font);
+        margin: 0;
+        padding: 2rem;
+    }
+
+    a:link {
+        color: inherit;
+    }
+
+    a:visited {
+        color: var(--link-visited-color);
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: underline;
+    }
+
+    table {
+        color: inherit;
+        line-height: inherit;
+    }
+
+    body > center {
+        text-align: left;
+    }
+
+    #hnmain {
+        background-color: var(--body-background-color) !important;
+        color: var(--body-text-color);
+        margin: -2rem;
+        width: calc(100% + 4rem) !important;
+    }
+
+    #pagespace {
+        height: 1em !important;
+    }
+
+    /**
+     * Main header and navigation.
+     */
+    .pagetop {
+        display: block;
+        font: inherit !important;
+        padding: 0.5em 0.5em;
+    }
+
+    .pagetop b {
+        font: inherit !important;
+        font-weight: bold !important;
+    }
+
+    td[bgcolor="#ff6600"] > table:first-child > tbody:first-child > tr:first-child > td:first-child {
+        padding: 0 0 0 2em !important;
+    }
+
+    td[bgcolor="#ff6600"] > table:first-child > tbody:first-child > tr:first-child > td:first-child a {
+        display: block;
+    }
+
+    td[bgcolor="#ff6600"] > table:first-child > tbody:first-child > tr:first-child > td:first-child img {
+        display: block;
+    }
+
+    /**
+     * Ranking number.
+     */
+    .rank {
+        color: var(--rank-color);
+        display: inline-block;
+        font: var(--rank-font);
+        padding-top: 0.5em;
+    }
+
+    /**
+     * Votearrows.
+     */
+    .votelinks a {
+        text-decoration: none;
+    }
+
+    .votearrow {
+        background: transparent;
+        border-radius: 50%;
+        color: var(--accent-color);
+        width: 1.5em;
+        height: 1.5em;
+        border: 0;
+        margin: 0 0.5em;
+        padding: 0;
+        font-size: 1.2em;
+    }
+
+    .votearrow:before {
+        content: "↑";
+    }
+
+    .votearrow:hover {
+        color: inherit;
+    }
+
+    /**
+     * Comment list.
+     */
+    .itemlist {
+        margin: 1em 2em;
+    }
+
+    /**
+     * Posts and comments.
+     */
+    .athing > td:first-child {
+        padding: 0 1em 0 2em !important;
+    }
+
+    .title {
+        color: inherit;
+        font: inherit;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .comhead,
+    .comment,
+    .default,
+    .yclinks,
+    .subtext,
+    td {
+        color: inherit;
+        font: inherit;
+        line-height: inherit;
+    }
+
+    .comment {
+        max-width: 80ch;
+        overflow-wrap: anywhere;
+    }
+
+    .spacer {
+        height: 1em !important;
+    }
+
+    font {
+        font: inherit;
+    }
+
+    .cdd,
+    .cdd a:link,
+    .cdd a:visited {
+        color: var(--link-visited-color);
+    }
+
+    .c00,
+    .c00 a:link {
+        color: inherit;
+    }
+
+    /**
+     * Login page.
+     */
+    body > form {
+        background: var(--panel-background-color);
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    body > b {
+        display: block;
+        margin: 2rem 2rem -4rem 2rem;
+    }
+
+    body > a {
+        display: block;
+        margin: 2rem 2rem -4rem 2rem;
+    }
+
+    /**
+     * Forms.
+     */
+    input,
+    textarea {
+        color: inherit;
+        font: inherit;
+        line-height: inherit;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        background: var(--accent-color);
+        border: 1px solid transparent;
+        border-radius: 0.25em;
+        color: var(--body-text-color);
+        cursor: pointer;
+        padding: 0.6em 1.2em;
+        text-transform: capitalize;
+    }
+
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+        background: transparent;
+        border-color: var(--accent-color);
+    }
+
+    input[type="password"],
+    input[type="text"],
+    textarea {
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.6em 1em;
+    }
+}
