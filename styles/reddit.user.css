@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name Reddit
+@namespace https://github.com/gocom/usercss
+@version 1.0.0
+@description Personal UserCSS
+@author Jukka Svahn (https://github.com/gocom)
+@homepageURL https://github.com/gocom/usercss
+@supportURL https://github.com/gocom/usercss/issues
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("reddit.com") {
+    /**
+     * Hide 'Please add email' banner.
+     */
+    .kEQVd8aneM1tVkcIKUyDT {
+        display: none !important;
+    }
+}
