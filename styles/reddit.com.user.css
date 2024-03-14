@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Reddit
 @namespace https://github.com/gocom/usercss
-@version 2.0.1
+@version 2.0.2
 @description Personal UserCSS
 @author Jukka Svahn (https://github.com/gocom)
 @homepageURL https://github.com/gocom/usercss
@@ -17,64 +17,5 @@
      */
     .kEQVd8aneM1tVkcIKUyDT {
         display: none !important;
-    }
-
-    /**
-     * Increase main grid width to span the whole viewport.
-     */
-    report-flow-provider > .sidebar-grid,
-    report-flow-provider > .grid-container,
-    shreddit-app > .grid-container {
-        width: 100%;
-        max-width: calc(100% - 1rem);
-        grid-column-start: 4;
-        box-sizing: border-box;
-    }
-
-    @media (min-width: 1416px) {
-        report-flow-provider > .sidebar-grid,
-        report-flow-provider > .grid-container,
-        shreddit-app > .grid-container {
-            margin: 0 0 0 1rem;
-        }
-    }
-
-    report-flow-provider > .grid-container > .subgrid-container,
-    shreddit-app > .grid-container > .subgrid-container {
-        grid-column-start: 1;
-        grid-column-end: 19;
-    }
-
-    @media (min-width: 1200px) {
-        report-flow-provider > .grid-container > .subgrid-container,
-        shreddit-app > .grid-container > .subgrid-container {
-            grid-column-start: 4;
-        }
-    }
-
-    /**
-     * Increase main content width and reduce right sidebar width.
-     */
-    @media (min-width: 768px) {
-        .sidebar-grid #main-content {
-            grid-column: 1 / -4;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        #main-content {
-            grid-column: 1 / -4;
-        }
-
-        .sidebar-grid #main-content {
-            grid-column: 4 / -4;
-        }
-    }
-
-    #right-sidebar-container {
-        grid-column: -4 / span 4;
-        background: var(--color-neutral-background-weak);
-        border-left: 1px solid var(--color-neutral-border-weak);
-        box-sizing: border-box;
     }
 }
