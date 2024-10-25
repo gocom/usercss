@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name Instagram
+@namespace https://github.com/gocom/usercss
+@version 1.0.0
+@description Personal UserCSS
+@author Jukka Svahn (https://github.com/gocom)
+@homepageURL https://github.com/gocom/usercss
+@supportURL https://github.com/gocom/usercss/issues
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("instagram.com") {
+    /**
+     * Remove the overlay from on top of the images.
+     */
+    [role=button] ._aagv + ._aagw {
+        display: none !important;
+    }
+}
