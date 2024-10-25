@@ -12,6 +12,9 @@
 @-moz-document domain("instagram.com") {
     /**
      * Remove the overlay from on top of the images.
+     *
+     * Allows viewing the image in it's full
+     * size.
      */
     [role=button] ._aagv + ._aagw {
         display: none !important;
